@@ -11,6 +11,10 @@ import (
 	"github.com/blablatov/scada4modbus2sensors/sensors2mgo"
 )
 
+const (
+	DsnMongo = "mongodb://localhost:27017/testdb"
+)
+
 func BenchmarkInterface(b *testing.B) {
 	b.ReportAllocs()
 	for i := 0; i < 5; i++ {
