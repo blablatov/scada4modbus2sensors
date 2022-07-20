@@ -15,9 +15,9 @@ import (
 
 	"github.com/blablatov/scada/sensors2mssql"
 
-	"github.com/blablatov/scada/main4sensors/funsensors"
-	"github.com/blablatov/scada/main4sensors/gsensors2mgo"
-	"github.com/blablatov/scada/main4sensors/sensors2mgo"
+	"github.com/blablatov/scada4modbus2sensors/funsensors"
+	"github.com/blablatov/scada4modbus2sensors/gsensors2mgo"
+	"github.com/blablatov/scada4modbus2sensors/sensors2mgo"
 )
 
 type dBaseMssql struct {

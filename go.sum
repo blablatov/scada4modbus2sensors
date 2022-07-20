@@ -1,6 +1,10 @@
 github.com/Azure/azure-sdk-for-go/sdk/azcore v0.19.0/go.mod h1:h6H6c8enJmmocHUbLiiGY6sx7f9i+X3m1CHdd5c6Rdw=
 github.com/Azure/azure-sdk-for-go/sdk/azidentity v0.11.0/go.mod h1:HcM1YX14R7CJcghJGOYCgdezslRSVzqwLf/q+4Y2r/0=
 github.com/Azure/azure-sdk-for-go/sdk/internal v0.7.0/go.mod h1:yqy467j36fJxcRV2TzfVZ1pCb5vxm4BtZPUdYWe/Xo8=
+github.com/blablatov/scada/main4sensors/gsensors2mgo v0.0.0-20220719183135-c68ec8362197 h1:HfPTh6mdQ28l3tfPmR4MpT96T/1xY11y8ov3X4IuJfA=
+github.com/blablatov/scada/main4sensors/gsensors2mgo v0.0.0-20220719183135-c68ec8362197/go.mod h1:cba4kRMLLDT8LD6aQmDU6UH6KwT41hQFMLTHZP9jujQ=
+github.com/blablatov/scada/main4sensors/sensors2mgo v0.0.0-20220719183135-c68ec8362197 h1:djOKRzFfC6o6lFv3wVnMxS/sLBSkKH1ivfOLzurMGq4=
+github.com/blablatov/scada/main4sensors/sensors2mgo v0.0.0-20220719183135-c68ec8362197/go.mod h1:LLB+pymfI3BNVabepDRva+M0U/FsacIXn3zHVz7wxQk=
 github.com/blablatov/scada/sensors2mssql v0.0.0-20220719183135-c68ec8362197 h1:uc4czvcFmL9gTpt+58L1yOF55nCawJjzANa9FsLoRlg=
 github.com/blablatov/scada/sensors2mssql v0.0.0-20220719183135-c68ec8362197/go.mod h1:3erY+yNSKH6cj/FHEdfD3+xVVzVSrqfEsDPvIJ0bTZ0=
 github.com/davecgh/go-spew v1.1.0/go.mod h1:J7Y8YcW2NihsgmVo/mv3lAwl/skON4iLHjSsI+c5H38=

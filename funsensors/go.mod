@@ -1,3 +1,3 @@
-module github.com/blablatov/scada/main4sensors/funsensors
+module github.com/blablatov/scada4modbus2sensors/funsensors
 
 go 1.16

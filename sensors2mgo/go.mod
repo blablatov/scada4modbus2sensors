@@ -1,4 +1,4 @@
-module github.com/blablatov/scada/main4sensors/sensors2mgo
+module github.com/blablatov/scada4modbus2sensors/sensors2mgo
 
 go 1.16
 
