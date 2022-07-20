@@ -19,7 +19,7 @@ jobs:
         go-version: 1.18
 
     - name: Build
-      run: go build -v ./main4sensors/main4sensors.go
+      run: go build -v ./main4sensors.go
 
     - name: Test
-      run: go test -v ./main4sensors/main4sensors_test.go
+      run: go test -v ./main4sensors_test.go
