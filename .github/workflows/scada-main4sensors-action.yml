@@ -23,3 +23,6 @@ jobs:
 
     - name: Test
       run: go test -v ./main4sensors_test.go
+
+    - name: TestBench
+      run: go test -bench=. ./main4sensors_test.go
