@@ -1,6 +1,7 @@
 // Main demo module do formating and transmit data to MongoDB or MSSQL module for write to DB.
 // Основной демо модуль выполняет форматирование и передает данные в модуль MongoDB или MSSQL для записи в БД.
-// Base of idea to https://github.com/samkalnins/ds18b20-prometheus-exporter. Thanks him!
+// Base of idea to https://github.com/samkalnins/ds18b20-prometheus-exporter. Thanks dude!
+
 package main
 
 import (

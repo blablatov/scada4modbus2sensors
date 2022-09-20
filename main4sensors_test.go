@@ -11,9 +11,34 @@ import (
 	"github.com/blablatov/scada4modbus2sensors/sensors2mgo"
 )
 
-const (
-	DsnMongo = "mongodb://localhost:27017/testdb"
-)
+func Test(t *testing.T) {
+	var tests = []struct {
+		SensorType string
+		DataSensor float64
+	}{
+		{"dallas_1", 55.6},
+		{"dallas_2", -18.2},
+		{"dallas_54", -45.1},
+		{"Data for test", 0.1},
+		{"Yes, no", 0.02},
+	}
+
+	var prevSensorType string
+	for _, test := range tests {
+		if test.SensorType != prevSensorType {
+			fmt.Printf("\n%s\n", test.SensorType)
+			prevSensorType = test.SensorType
+		}
+	}
+
+	var prevDataSensor float64
+	for _, test := range tests {
+		if test.DataSensor != prevDataSensor {
+			fmt.Printf("\n%f\n", test.DataSensor)
+			prevDataSensor = test.DataSensor
+		}
+	}
+}
 
 func BenchmarkInterface(b *testing.B) {
 	b.ReportAllocs()
@@ -30,16 +55,14 @@ func BenchmarkInterface(b *testing.B) {
 
 func BenchmarkGoroutine(b *testing.B) {
 	b.ReportAllocs()
-	for i := 0; i < 5; i++ {
-		md := sensors2mgo.SensMongo{
-			SensorType: "dallas_1",
-			DataSensor: 18.433,
-		}
+	for i := 0; i < 1; i++ {
+		SensorType := "dallas_1"
+		DataSensor := 18.433
 		ct := make(chan string)   // Channel to data send  type of sensor. Канал передачи типа датчика.
 		ctd := make(chan float64) // Channel to data send temperature. Канал данных температуры.
-		//done := make(chan bool)   // Channel of synchronization. Канал синхронизации.
 		var wg sync.WaitGroup
-		go gsensors2mgo.SensData(md.SensorType, DsnMongo, md.DataSensor, ct, ctd, wg)
+		wg.Add(1)
+		go gsensors2mgo.SensData(SensorType, DsnMongo, DataSensor, ct, ctd, wg)
 		// Getting data from goroutine. Получение данных из канала горутины.
 		fmt.Println("\nSensor of system: ", <-ct, "\nData of sensor: ", <-ctd)
 		go func() {
