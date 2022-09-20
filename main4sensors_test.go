@@ -7,6 +7,7 @@ import (
 
 	"github.com/blablatov/scada4modbus2sensors/gsensors2mgo"
 	"github.com/blablatov/scada4modbus2sensors/sensors2mgo"
+	"github.com/blablatov/scada4sensors2mssql"
 )
 
 func Test(t *testing.T) {
