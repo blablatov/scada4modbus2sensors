@@ -10,6 +10,10 @@ import (
 	"github.com/blablatov/scada4sensors2mssql"
 )
 
+const (
+	DsnMongo2 = "mongodb://localhost:27017/testdb"
+)
+
 func Test(t *testing.T) {
 	var tests = []struct {
 		SensorType string
@@ -47,7 +51,7 @@ func BenchmarkInterface(b *testing.B) {
 			DataSensor: 18.433,
 		}
 		var d sensors2mgo.Monger = md
-		db := d.SensData(DsnMongo)
+		db := d.SensData(DsnMongo2)
 		fmt.Println("Result of request to MongoDB via interface method", db)
 	}
 }
@@ -61,7 +65,7 @@ func BenchmarkGoroutine(b *testing.B) {
 		ctd := make(chan float64) // Channel to data send temperature. Канал данных температуры.
 		var wg sync.WaitGroup
 		wg.Add(1)
-		go gsensors2mgo.SensData(SensorType, DsnMongo, DataSensor, ct, ctd, wg)
+		go gsensors2mgo.SensData(SensorType, DsnMongo2, DataSensor, ct, ctd, wg)
 		// Getting data from goroutine. Получение данных из канала горутины.
 		fmt.Println("\nSensor of system: ", <-ct, "\nData of sensor: ", <-ctd)
 		go func() {
