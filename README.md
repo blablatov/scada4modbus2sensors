@@ -1,3 +1,4 @@
+[![Go](https://github.com/blablatov/scada4modbus2sensors/actions/workflows/scada-main4sensors-action.yml/badge.svg)](https://github.com/blablatov/scada4modbus2sensors/actions/workflows/scada-main4sensors-action.yml)
 ## scada
 ### Ru
 
